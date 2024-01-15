@@ -1,0 +1,52 @@
+.msgbox {
+  min-width: 300px;
+  min-height: 50px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto min-content;
+  grid-template-areas:
+    "title title"
+    "icon content"
+    "button button";
+  margin: 32px;
+  padding: 18px;
+}
+
+.msgbox > svg {
+  width: 64px;
+  height: 64px;
+  grid-area: icon;
+  justify-self: center;
+  align-self: center;
+  margin: 8px 8px 8px 0px;
+}
+
+.msgbox > h3 {
+  grid-area: title;
+  margin-bottom: 12px;
+}
+
+.msgbox > p {
+  grid-area: content;
+  padding: 8px;
+}
+
+.msgbox > .btn-group {
+  grid-area: button;
+  justify-self: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.msgbox .btn {
+  color: var(--primary);
+  padding: 8px 18px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}

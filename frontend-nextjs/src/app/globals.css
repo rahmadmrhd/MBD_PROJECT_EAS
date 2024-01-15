@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  --primary: #3a7ed1;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.tooltip-text {
+  position: absolute;
+  top: -40px;
+  left: -50%;
+  z-index: 2;
+  width: 100px;
+  color: white;
+  font-size: 12px;
+  background-color: #192733;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.delay {
+  opacity: 0;
+  transition-delay: 1s;
+}
+
+.tooltip-hover:hover .fade,
+.tooltip-hover:hover .delay,
+.tooltip-hover:hover .tooltip-text {
+  opacity: 1;
+}
+/* :focus-visible {
+  border: 0px dashed hsl(0, 0%, 50%);
+  outline: none;
+} */
+/* .focus-visible:focus-visible {
+  border: 0px dashed hsl(0, 0%, 50%) !important;
+  outline: none !important;
+} */
+/* .focus:focus {
+  border: 0px dashed hsl(0, 0%, 50%) !important;
+  outline: none !important;
+} */
+.hidefocus:focus-visible {
+  border: 0px dashed hsl(0, 0%, 50%);
+  outline: none;
+}
+.hide {
+  display: none !important;
+}
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hidden-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.disable-link {
+  pointer-events: none !important;
+}
+
+.disable-click {
+  cursor: default !important;
+}
+
+.disable-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.main-container {
+  position: relative;
+  left: 60px;
+  top: 48px;
+}
+@media (max-width: 600px) {
+  .main-container {
+    left: 0px;
+    top: 48px;
+  }
+}
